@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    height: 100vh;
+    background-color: black;
+}
+
+.btn {
+    display: block;
+    position: relative;
+    top: 50%;
+    width: 120px;
+    height: 40px;
+    margin: 0 auto;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: hsl(172, 67%, 45%);
+    color: white;
+    cursor: pointer;
+}
+
+.ip-info-container {
+    display: block;
+    visibility: hidden;
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 300px;
+    height: 300px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.ip-address {
+    text-align: center;
+    color: red;
+}
+
+.name {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
