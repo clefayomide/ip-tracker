@@ -1,2 +1,1 @@
-# ip-tracker
-# live link: https://clefayomide.github.io/ip-tracker
+Live link: https://clefayomide.github.io/ip-tracker
