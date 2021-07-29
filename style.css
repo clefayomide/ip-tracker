@@ -13,13 +13,19 @@ body {
     background-color: black;
 }
 
+.centred {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 20%;
+}
+
 .btn {
     display: block;
-    position: relative;
-    top: 50%;
     width: 120px;
     height: 40px;
     margin: 0 auto;
+    margin-top: 20px;
     font-size: 20px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
