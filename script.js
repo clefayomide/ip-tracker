@@ -10,26 +10,32 @@ let btn = document.querySelector(".btn");
 
 async function getDetails() {
   await fetch("https://api.ipify.org?format=json")
-     .then((response) => response.json())
-     .then((data) => {
+    .then((response) => response.json())
+    .then((data) => {
       let ip = data.ip;
       window.ip = ip;
       ipAddress.innerHTML = `IP ADDRESS: ${ip}`;
     })
     .catch((error) => console.log(error));
-    coords()
-};
+  coords();
+}
 
 let coords = () => {
-    fetch("http://ip-api.com/json/" + `${ip}?fields=status,message,continent,continentCode,country,countryCode,region,regionName,city,district,zip,lat,lon,timezone,offset,currency,isp,org,as,mobile,query`).then((response) => response.json()).then((data) => {
-        ipInfoContainer.style.visibility = "visible"
-        continentName.innerHTML = data.continent
-        countryName.innerHTML = data.country
-        cityName.innerHTML = data.city
-        latValue.innerHTML = data.lat
-        lonValue.innerHTML = data.lon
-        ispName.innerHTML = data.isp
-    }).catch((error) => console.log(error))
-}
+  fetch(
+    "https://geo.ipify.org/api/v1?apiKey=at_ozRQ7AEOCUTRPiuRKyocronAVq5OT&ipAddress=" +
+      `${ip}`
+  )
+    .then((response) => response.json())
+    .then((data) => {
+      ipInfoContainer.style.visibility = "visible";
+      continentName.innerHTML = data.location.country;
+      countryName.innerHTML = data.location.region;
+      cityName.innerHTML = data.location.city;
+      latValue.innerHTML = data.location.lat;
+      lonValue.innerHTML = data.location.lng;
+      ispName.innerHTML = data.isp;
+    })
+    .catch((error) => console.log(error));
+};
 
 btn.addEventListener("click", getDetails);
