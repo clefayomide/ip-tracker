@@ -13,7 +13,7 @@
 
 ## Overview
 
-Api's are very important part of a frontend developer job, most of the time as a FE dev you are speaking to various api in one project or the other. Learning about Api's, i decided to use what i've learnt so far to build a web based ip tracker using [ipify](https://ipify.org) public Api. 
+Api's are very important part of every frontend application, most of the time as a FE dev you are connecting to various api in one project or the other. Learning about Api's, i decided to use what i've learnt so far to build a web based ip tracker using [ipify](https://ipify.org) public Api. 
 
 ### The goal
 
